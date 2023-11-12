@@ -2775,7 +2775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc3d7be0a1b704dc7a751d5e2d0edd53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 985494016}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
@@ -2868,7 +2868,7 @@ MonoBehaviour:
   m_XROrigin: {fileID: 0}
   m_ExcludeUITouches: 1
   m_ARSessionOrigin: {fileID: 0}
-  m_PlacementPrefab: {fileID: 2778712425937499103, guid: 6533b158d877146458a686abe1c6918a, type: 3}
+  m_PlacementPrefab: {fileID: 6883629729550190176, guid: 13ab25de926d4164b919a10a5352e13a, type: 3}
   m_FallbackLayerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -5054,7 +5054,7 @@ SceneRoots:
   - {fileID: 985494017}
   - {fileID: 1450399173}
   - {fileID: 107306372}
+  - {fileID: 1354923228}
   - {fileID: 847669334}
   - {fileID: 1158132545}
   - {fileID: 930789279}
-  - {fileID: 1354923228}
