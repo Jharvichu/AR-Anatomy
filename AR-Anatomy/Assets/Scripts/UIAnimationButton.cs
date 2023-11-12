@@ -16,30 +16,30 @@ public class UIAnimationButton : MonoBehaviour
     RectTransform target;
 
     [SerializeField]
-    Vector2 startingPoint;
+    Vector3 startingPoint;
     [SerializeField]
-    Vector2 finalPoint;
+    Vector3 finalPoint;
     [ContextMenu("Fade in")]
     public void FadeIn()
     {
         StopAllCoroutines();
-        StartCoroutine(FadeInCoroutine(startingPoint,finalPoint));
+        StartCoroutine(FadeInCoroutine(startingPoint, finalPoint));
     }
     [ContextMenu("Fade out")]
     public void FadeOut()
     {
         StopAllCoroutines();
-        StartCoroutine(FadeInCoroutine(finalPoint,startingPoint));
+        StartCoroutine(FadeOutCoroutine(startingPoint, finalPoint));
     }
 
-    IEnumerator FadeInCoroutine(Vector2 a, Vector2 b)
+    IEnumerator FadeInCoroutine(Vector3 a, Vector3 b)
     {
-        Vector2 staringPoint = a;
-        Vector2 finalPoint = b;
+        Vector3 staringPoint = a;
+        Vector3 finalPoint = b;
         float elapsed = 0;
         while (elapsed <= delay)
         {
-            elapsed = Time.deltaTime;
+            elapsed += Time.deltaTime;
             yield return null;
         }
 
@@ -49,7 +49,7 @@ public class UIAnimationButton : MonoBehaviour
             float percentage = elapsed / duration;
             float curvePercentage = animationCurve.Evaluate(percentage);
             elapsed += Time.deltaTime;
-            Vector2 currentPosition = Vector2.LerpUnclamped(startingPoint, finalPoint, curvePercentage);
+            Vector3 currentPosition = Vector3.LerpUnclamped(startingPoint, finalPoint, curvePercentage);
             target.anchoredPosition = currentPosition;
             yield return null;
         }
@@ -57,4 +57,30 @@ public class UIAnimationButton : MonoBehaviour
         target.anchoredPosition = finalPoint;
 
     }
+
+    IEnumerator FadeOutCoroutine(Vector2 a, Vector2 b)
+    {
+        Vector3 staringPoint = a;
+        Vector3 finalPoint = b;
+        float elapsed = 0;
+        while (elapsed <= delay)
+        {
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        elapsed = 0;
+        while (elapsed <= duration)
+        {
+            float percentage = elapsed / duration;
+            float curvePercentage = animationCurve.Evaluate(percentage);
+            elapsed += Time.deltaTime;
+            Vector3 currentPosition = Vector3.LerpUnclamped(finalPoint, staringPoint, curvePercentage);
+            target.anchoredPosition = currentPosition;
+            yield return null;
+        }
+
+        target.anchoredPosition = staringPoint;
+    }
+
 }
