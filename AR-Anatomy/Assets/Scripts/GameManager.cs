@@ -6,6 +6,7 @@ using System;
 public class GameManager : MonoBehaviour
 {
     public event Action OnStart;
+    public event Action OnDetection;
     public event Action OnMainMenu;
     public event Action OnARPosition;
     public event Action OnInformation;
@@ -58,6 +59,12 @@ public class GameManager : MonoBehaviour
     public void Information()
     {
         OnInformation?.Invoke();
+        Debug.Log("Informacion Activado");
+    }
+
+    public void Detection()
+    {
+        OnDetection?.Invoke();
         Debug.Log("Informacion Activado");
     }
 
