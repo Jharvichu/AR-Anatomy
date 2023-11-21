@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public event Action OnStart;
     public event Action OnDetection;
+    public event Action OnDetectionCorrect;
+    public event Action OnDetectionIncorrect;
     public event Action OnMainMenu;
     public event Action OnARPosition;
     public event Action OnInformation;
@@ -65,6 +67,18 @@ public class GameManager : MonoBehaviour
     public void Detection()
     {
         OnDetection?.Invoke();
+        Debug.Log("Informacion Activado");
+    }
+
+    public void DetectionCorrect()
+    {
+        OnDetectionCorrect?.Invoke();
+        Debug.Log("Informacion Activado");
+    }
+
+    public void DetectionIncorrect()
+    {
+        OnDetectionIncorrect?.Invoke();
         Debug.Log("Informacion Activado");
     }
 
