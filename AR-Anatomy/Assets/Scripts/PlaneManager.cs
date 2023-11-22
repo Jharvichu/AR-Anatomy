@@ -28,23 +28,19 @@ public class PlaneManager : MonoBehaviour
         if (planeData != null && planeData.added.Count > 0)
         {
             planes.AddRange(planeData.added);
-            if (planes.Count >= 3) // Comprueba si se ha alcanzado el umbral
+            if (planes.Count >= 5) // Comprueba si se ha alcanzado el umbral
             {
                 UIManager.instance.ActivateMainMenu();
             }
-        }
-        else
-        {
-            UIManager.instance.ActivateDetectionIncorrect();
+            else
+            {
+                UIManager.instance.ActivateDetectionIncorrect();
+            }
         }
     }
 
     void Start()
     {
-        // Asegúrate de que el botón esté desactivado al inicio
-        buttonStarDetection.interactable = false;
-
-        // Agrega un listener al botón para llamar al método StartDetection cuando se presione
         buttonStarDetection.onClick.AddListener(StartDetection);
     }
 
