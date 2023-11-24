@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
+
 public class ShareScreenShot : MonoBehaviour
 {
-    [Serializefield] private GameObject mainMenuCanvas;
+    [SerializeField] private GameObject mainMenuCanvas;
     private ARPointCloudManager aRPointCloudManager;
-    // Start is called before the first frame update
+
     void Start()
     {
         aRPointCloudManager = FindObjectOfType<ARPointCloudManager>();
@@ -22,17 +23,12 @@ public class ShareScreenShot : MonoBehaviour
 
     private void TurnOnOffARContents()
     {
-        throw new NotImplementedException();
-    }
-
-    private void TurnOnOffARcontents()
-    {
-        var points = aRPointCloudManager.trackables;
-        foreach (CanvasRenderer point in points)
+        // Implement logic to turn on/off AR contents
+        // For example:
+        if (mainMenuCanvas != null)
         {
-            point.gameObject.SetActive(false!point.gameObject.activeSelf);
+            mainMenuCanvas.SetActive(!mainMenuCanvas.activeSelf);
         }
-        mainMenuCanvas.SetActive(!mainMenuCanvas.activeSelf);
     }
 
     private IEnumerator TakeScreenshotAndShare()
@@ -53,10 +49,7 @@ public class ShareScreenShot : MonoBehaviour
             .SetSubject("Subject goes here").SetText("Hey, how do you like the image?")
             .SetCallback((result, shareTarget) => Debug.Log("Share result: " + result + ", selected app: " + shareTarget))
             .Share();
-        TurnOnOffARContents();
 
-        // Share on WhatsApp only, if installed (Android only)
-        //if( NativeShare.TargetExists( "com.whatsapp" ) )
-        //	new NativeShare().AddFile( filePath ).AddTarget( "com.whatsapp" ).Share();
+        TurnOnOffARContents();
     }
 }
