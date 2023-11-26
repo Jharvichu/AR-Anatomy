@@ -9,6 +9,7 @@ public class ModelsButton : MonoBehaviour
     private string modelName;
     private Sprite modelImage;
     private GameObject model3D;
+    private ARInteractionManager interactionManager;
     public string ModelName { set => modelName = value; }
     public Sprite ModelImage { set => modelImage = value; }
     public GameObject Model3D { set => model3D = value; }
@@ -28,11 +29,13 @@ public class ModelsButton : MonoBehaviour
         button.onClick.AddListener(GameManager.instance.ARPosition);
         button.onClick.AddListener(Create3DModel);
 
+        interactionManager = FindObjectOfType<ARInteractionManager>();
+
     }
 
     private void Create3DModel()
     {
-        Instantiate(model3D);
+        interactionManager.Model3D = Instantiate(model3D);
     }
 
 }

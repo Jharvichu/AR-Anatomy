@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Organo
   m_EditorClassIdentifier: 
   ModelName: Organos
-  ModelImage: {fileID: 21300000, guid: 340b50255c1c7764a89eeb7bdd4ebe0c, type: 3}
-  Model3D: {fileID: 2156342725939438897, guid: 9b08e554a0a21e64a84c9f19e6fda28f, type: 3}
+  ModelImage: {fileID: 21300000, guid: 422f0b849552edb43a675f7303d86926, type: 3}
+  Model3D: {fileID: 5110070779624177737, guid: dbba804a0174acb429f502e3fa6d2061, type: 3}
