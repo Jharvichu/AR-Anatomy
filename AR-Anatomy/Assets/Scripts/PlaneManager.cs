@@ -28,7 +28,7 @@ public class PlaneManager : MonoBehaviour
         if (planeData != null && planeData.added.Count > 0)
         {
             planes.AddRange(planeData.added);
-            if (planes.Count >= 5) // Comprueba si se ha alcanzado el umbral
+            if (planes.Count >= 1) // Comprueba si se ha alcanzado el umbral
             {
                 UIManager.instance.ActivateMainMenu();
             }
