@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModelName: Musculos
   ModelImage: {fileID: 21300000, guid: e951ec5882c23cd43a8d56341c93b897, type: 3}
-  Model3D: {fileID: 5769229577337579382, guid: 68840bf95b984344680464dd446dbea7, type: 3}
+  Model3D: {fileID: 754361190027196479, guid: 53a9289779f63534a9ea453af046b7d7, type: 3}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModelName: Esqueleto
   ModelImage: {fileID: 21300000, guid: be89b13c4b98d7147aab35cb196369d8, type: 3}
-  Model3D: {fileID: 4210278771175667681, guid: 2e1cb8a37ca3c254e95c5054882cf8f6, type: 3}
+  Model3D: {fileID: 7568182285985341489, guid: 836b668546667fd4d8329bd8c911a63e, type: 3}
