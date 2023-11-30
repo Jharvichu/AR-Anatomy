@@ -51,7 +51,7 @@ public class ARInteractionManager : MonoBehaviour
             }
         }
 
-        if (Input.touchCount > 0)
+        if (Input.touchCount == 1)
         {
             Touch touchOne = Input.GetTouch(0);
                 if(touchOne.phase == TouchPhase.Began){
@@ -82,7 +82,7 @@ public class ARInteractionManager : MonoBehaviour
             {
                 Vector2 currentTouch = touchTwo.position - touchOne.position;
                 float angulo = Vector2.SignedAngle(PosicionInicialTouch, currentTouch);
-                model3D.transform.rotation = Quaternion.Euler(0,model3D.transform.eulerAngles.y, 0);
+                model3D.transform.rotation = Quaternion.Euler(0,model3D.transform.eulerAngles.y - angulo, 0);
                 PosicionInicialTouch = currentTouch;
             }
         }

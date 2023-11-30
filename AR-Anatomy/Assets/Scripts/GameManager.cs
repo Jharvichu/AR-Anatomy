@@ -58,12 +58,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("Opciones Activado");
     }
 
-    public void Information()
-    {
-        OnInformation?.Invoke();
-        Debug.Log("Informacion Activado");
-    }
-
     public void StartDetection()
     {
         OnStartDetection?.Invoke();
