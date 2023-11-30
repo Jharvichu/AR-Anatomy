@@ -96,8 +96,8 @@ public class UIManager : MonoBehaviour
 
     private void ActivateStartApp()
     {
-        inicioCanvas.transform.GetChild(0).transform.DOMoveY(300, 0.5f);
-        inicioCanvas.transform.GetChild(1).transform.DOMoveY(300, 0.5f);
+        inicioCanvas.transform.GetChild(0).transform.DOMoveY(550, 0.5f);
+        inicioCanvas.transform.GetChild(1).transform.DOMoveY(550, 0.5f);
 
         deteccionCanvas.transform.GetChild(0).transform.DOScale(new Vector3(3, 3, 3), 0.001f);
 
