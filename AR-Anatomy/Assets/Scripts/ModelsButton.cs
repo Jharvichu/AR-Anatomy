@@ -15,23 +15,13 @@ public class ModelsButton : MonoBehaviour
     public Sprite ModelImage { set => modelImage = value; }
     public GameObject Model3D { set => model3D = value; }
 
-
-
-
-
-
-    // Start is called before the first frame update
     void Start()
     {
-        //transform.GetChild(0).GetComponent<Text>().text = modelName;
         transform.GetChild(0).GetComponent<RawImage>().texture = modelImage.texture;
-
         var button = GetComponent<Button>();
         button.onClick.AddListener(GameManager.instance.ARPosition);
         button.onClick.AddListener(Create3DModel);
-
         interactionManager = FindObjectOfType<ARInteractionManager>();
-
     }
 
     private void Create3DModel()
