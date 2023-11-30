@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 
@@ -13,7 +14,7 @@ public class PlaneManager : MonoBehaviour
     [SerializeField] private Button buttonAddPlanes;
     [SerializeField] private Button buttonDeleteAll;
 
-    static int CantPlane = 1;
+    int CantPlane = 1;
     private List<ARPlane> planes = new List<ARPlane>();
 
     private void OnEnable()
@@ -33,8 +34,8 @@ public class PlaneManager : MonoBehaviour
             planes.AddRange(planeData.added);
             if ( planes.Count >= CantPlane ) // Comprueba si se ha alcanzado el umbral
             {
-                UIManager.instance.ActivateMainMenu();
                 CantPlane++;
+                UIManager.instance.ActivateMainMenu();
             }
             else
             {
@@ -50,7 +51,7 @@ public class PlaneManager : MonoBehaviour
         buttonDeleteAll.onClick.AddListener(StopPlaneDetection);
     }
 
-    private void StartDetection()
+    public void StartDetection()
     {
         aRPlaneManager.enabled = true;
         UIManager.instance.ActivateDetection();
@@ -58,6 +59,8 @@ public class PlaneManager : MonoBehaviour
 
     public void StopPlaneDetection()
     {
+        //Eliminar planos detectados
+        Debug.Log("Se elimino los planos");
         aRPlaneManager.requestedDetectionMode = UnityEngine.XR.ARSubsystems.PlaneDetectionMode.None;
         foreach (var plane in planes)
         {

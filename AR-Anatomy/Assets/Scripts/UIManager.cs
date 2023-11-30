@@ -30,92 +30,108 @@ public class UIManager : MonoBehaviour
         GameManager.instance.OnDetection += ActivateDetection;
         GameManager.instance.OnDetectionIncorrect += ActivateDetectionIncorrect;
 
-        //AnimacionesAuxiliares
     }
 
     public void ActivateDetectionIncorrect()
     {
-        //Este canvas se expande
-        deteccionCanvas.transform.GetChild(0).transform.DOScale(new Vector3(3, 3, 3), 0.1f);
-        //Este canvas aparece del medio
-        deteccionIncorrectCanvas.transform.GetChild(0).transform.DOScale(new Vector3(1, 1, 1), 0.5f);
-        deteccionIncorrectCanvas.transform.GetChild(1).transform.DOScale(new Vector3(1, 1, 1), 0.5f);
+        //inicioCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        //inicioCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        
+        deteccionCanvas.transform.GetChild(0).transform.DOScale(new Vector3(4, 4, 4), 0.001f);
+        //deteccionCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
 
-        //menuPrincipalCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.5f);
-        //menuPrincipalCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.5f);
-        //menuPrincipalCanvas.transform.GetChild(2).transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        deteccionIncorrectCanvas.transform.GetChild(0).transform.DOScale(new Vector3(1, 1, 1), 0.1f);
+        deteccionIncorrectCanvas.transform.GetChild(1).transform.DOScale(new Vector3(1, 1, 1), 0.1f);
 
-        //posicionModelosCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.5f);
-        //posicionModelosCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        menuPrincipalCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        menuPrincipalCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        menuPrincipalCanvas.transform.GetChild(2).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+
+        posicionModelosCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        posicionModelosCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
     }
 
     public void ActivateDetection()
     {
         //Este canvas esta arriba, fuera de la pantalla
-        inicioCanvas.transform.GetChild(0).transform.DOMoveY(2000, 0.3f);
-        inicioCanvas.transform.GetChild(1).transform.DOMoveY(2000, 0.3f);
+        inicioCanvas.transform.GetChild(0).transform.DOMoveY(5000, 0.5f);
+        inicioCanvas.transform.GetChild(1).transform.DOMoveY(5000, 0.5f);
+
+        //inicioCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        //inicioCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
         //Este canvas aparece en la pantalla principal (escala 1)
-        deteccionCanvas.transform.GetChild(0).transform.DOScale(new Vector3(1, 1, 1), 0.5f);
+        deteccionCanvas.transform.GetChild(0).transform.DOScale(new Vector3(1, 1, 1), 0.1f);
+        //deteccionCanvas.transform.GetChild(1).transform.DOScale(new Vector3(1, 1, 1), 0.001f);
         //Este canvas desaparece en el medio
-        deteccionIncorrectCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.1f);
-        deteccionIncorrectCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.1f);
+        deteccionIncorrectCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        deteccionIncorrectCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
 
-        menuPrincipalCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.5f);
-        menuPrincipalCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.5f);
-        menuPrincipalCanvas.transform.GetChild(2).transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        menuPrincipalCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        menuPrincipalCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        menuPrincipalCanvas.transform.GetChild(2).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
 
-        posicionModelosCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.5f);
-        posicionModelosCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        posicionModelosCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        posicionModelosCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
     }
     private void ActivateARPosition()
     {
-        deteccionCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.0003f);
+        inicioCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        inicioCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
 
-        deteccionIncorrectCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.0003f);
-        deteccionIncorrectCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.0003f);
+        deteccionCanvas.transform.GetChild(0).transform.DOScale(new Vector3(3, 3, 3), 0.001f);
 
-        menuPrincipalCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.005f);
-        menuPrincipalCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.005f);
-        menuPrincipalCanvas.transform.GetChild(2).transform.DOScale(new Vector3(0, 0, 0), 0.005f);
+        deteccionIncorrectCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        deteccionIncorrectCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
 
-        posicionModelosCanvas.transform.GetChild(0).transform.DOScale(new Vector3(1, 1, 1), 0.5f);
-        posicionModelosCanvas.transform.GetChild(1).transform.DOScale(new Vector3(1, 1, 1), 0.5f);
+        menuPrincipalCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        menuPrincipalCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        menuPrincipalCanvas.transform.GetChild(2).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+
+        posicionModelosCanvas.transform.GetChild(0).transform.DOScale(new Vector3(1, 1, 1), 0.001f);
+        posicionModelosCanvas.transform.GetChild(1).transform.DOScale(new Vector3(1, 1, 1), 0.001f);
     }
 
     private void ActivateStartApp()
     {
-        //El canvas de inicio esta en la pantalla
         inicioCanvas.transform.GetChild(0).transform.DOMoveY(300, 0.5f);
         inicioCanvas.transform.GetChild(1).transform.DOMoveY(300, 0.5f);
+        //El canvas de inicio esta en la pantalla
+        //inicioCanvas.transform.GetChild(0).transform.DOScale(new Vector3(1, 1, 1), 0.001f);
+        //inicioCanvas.transform.GetChild(1).transform.DOScale(new Vector3(1, 1, 1), 0.001f);
         //Los demas canvas esta con escala 0
-        deteccionCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.01f);
+        deteccionCanvas.transform.GetChild(0).transform.DOScale(new Vector3(3, 3, 3), 0.001f);
 
-        deteccionIncorrectCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.01f);
-        deteccionIncorrectCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.01f);
+        deteccionIncorrectCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        deteccionIncorrectCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
 
-        menuPrincipalCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.1f);
-        menuPrincipalCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.1f);
-        menuPrincipalCanvas.transform.GetChild(2).transform.DOScale(new Vector3(0, 0, 0), 0.1f);
+        menuPrincipalCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        menuPrincipalCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        menuPrincipalCanvas.transform.GetChild(2).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
 
-        posicionModelosCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.01f);
-        posicionModelosCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.01f);
+        posicionModelosCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        posicionModelosCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
 
     }
 
     public void ActivateMainMenu()
     {
+        //inicioCanvas.transform.GetChild(0).transform.DOMoveY(5000, 0.001f);
+        //inicioCanvas.transform.GetChild(1).transform.DOMoveY(5000, 0.001f);
+        //inicioCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        //inicioCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
         //Este canvas desaparece agrandandose desde el centro
-        deteccionCanvas.transform.GetChild(0).transform.DOScale(new Vector3(3, 3, 3), 0.1f);
+        deteccionCanvas.transform.GetChild(0).transform.DOScale(new Vector3(3, 3, 3), 0.4f);
+        //deteccionCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
         //
-        //deteccionIncorrectCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.3f);
-        //deteccionIncorrectCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.3f);
+        deteccionIncorrectCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        deteccionIncorrectCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
         
-        menuPrincipalCanvas.transform.GetChild(0).transform.DOScale(new Vector3(1, 1, 1), 0.01f);
-        menuPrincipalCanvas.transform.GetChild(1).transform.DOScale(new Vector3(1, 1, 1), 0.01f);
-        menuPrincipalCanvas.transform.GetChild(2).transform.DOScale(new Vector3(1, 1, 1), 0.01f);
+        menuPrincipalCanvas.transform.GetChild(0).transform.DOScale(new Vector3(1, 1, 1), 0.001f);
+        menuPrincipalCanvas.transform.GetChild(1).transform.DOScale(new Vector3(1, 1, 1), 0.001f);
+        menuPrincipalCanvas.transform.GetChild(2).transform.DOScale(new Vector3(1, 1, 1), 0.001f);
 
-        posicionModelosCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.5f);
-        posicionModelosCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        posicionModelosCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
+        posicionModelosCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
     }
 
 }

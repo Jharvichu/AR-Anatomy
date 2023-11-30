@@ -6,12 +6,10 @@ using System;
 public class GameManager : MonoBehaviour
 {
     public event Action OnStart;
-    public event Action OnStartDetection;
     public event Action OnDetection;
     public event Action OnDetectionIncorrect;
     public event Action OnMainMenu;
     public event Action OnARPosition;
-    public event Action OnInformation;
     public event Action OnOption;
 
     public static GameManager instance;
@@ -56,12 +54,6 @@ public class GameManager : MonoBehaviour
     {
         OnOption?.Invoke();
         Debug.Log("Opciones Activado");
-    }
-
-    public void StartDetection()
-    {
-        OnStartDetection?.Invoke();
-        Debug.Log("Informacion Activado");
     }
 
     public void Detection()
