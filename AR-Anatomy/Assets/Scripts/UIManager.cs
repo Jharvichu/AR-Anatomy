@@ -68,8 +68,8 @@ public class UIManager : MonoBehaviour
 
     private void ActivateStartApp()
     {
-        inicioCanvas.transform.GetChild(0).transform.DOMoveY(1200, 0.5f);
-        inicioCanvas.transform.GetChild(1).transform.DOMoveY(1200, 0.5f);
+        inicioCanvas.transform.GetChild(0).transform.DOMoveY(300, 0.5f);
+        inicioCanvas.transform.GetChild(1).transform.DOMoveY(300, 0.5f);
 
         deteccionCanvas.transform.GetChild(0).transform.DOScale(new Vector3(3, 3, 3), 0.001f);
 
@@ -80,8 +80,6 @@ public class UIManager : MonoBehaviour
         menuPrincipalCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
         menuPrincipalCanvas.transform.GetChild(2).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
 
-        //posicionModelosCanvas.transform.GetChild(0).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
-        //posicionModelosCanvas.transform.GetChild(1).transform.DOScale(new Vector3(0, 0, 0), 0.001f);
     }
 
     public void ActivateMainMenu()
