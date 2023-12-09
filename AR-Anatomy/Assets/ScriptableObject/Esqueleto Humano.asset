@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac936ecd647a1d940b0abaee47b8732b, type: 3}
+  m_Name: Esqueleto Humano
+  m_EditorClassIdentifier: 
+  ModelName: Esqueleto
+  ModelImage: {fileID: 21300000, guid: be89b13c4b98d7147aab35cb196369d8, type: 3}
+  Model3D: {fileID: 7568182285985341489, guid: 836b668546667fd4d8329bd8c911a63e, type: 3}

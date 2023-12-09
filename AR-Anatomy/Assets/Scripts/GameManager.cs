@@ -6,13 +6,10 @@ using System;
 public class GameManager : MonoBehaviour
 {
     public event Action OnStart;
-    public event Action OnStartDetection;
     public event Action OnDetection;
     public event Action OnDetectionIncorrect;
     public event Action OnMainMenu;
     public event Action OnARPosition;
-    public event Action OnInformation;
-    public event Action OnOption;
 
     public static GameManager instance;
 
@@ -27,13 +24,12 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
     }
-
-
+    //Al iniciar, estara con el evento StarApp
     void Start()
     {
         StartApp();
     }
-
+    //Metodos que activan los eventos
     public void StartApp()
     {
         OnStart?.Invoke();
@@ -52,34 +48,16 @@ public class GameManager : MonoBehaviour
         Debug.Log("ARPosicion Activado");
     }
 
-    public void Options()
-    {
-        OnOption?.Invoke();
-        Debug.Log("Opciones Activado");
-    }
-
-    public void Information()
-    {
-        OnInformation?.Invoke();
-        Debug.Log("Informacion Activado");
-    }
-
-    public void StartDetection()
-    {
-        OnStartDetection?.Invoke();
-        Debug.Log("Informacion Activado");
-    }
-
     public void Detection()
     {
         OnDetection?.Invoke();
-        Debug.Log("Informacion Activado");
+        Debug.Log("Deteccion Activado");
     }
-
+    
     public void DetectionIncorrect()
     {
         OnDetectionIncorrect?.Invoke();
-        Debug.Log("Informacion Activado");
+        Debug.Log("Deteccion Incorrecta Activado");
     }
 
     public void CloseApp()
