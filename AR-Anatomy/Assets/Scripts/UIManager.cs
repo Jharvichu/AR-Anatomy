@@ -41,7 +41,6 @@ public class UIManager : MonoBehaviour
 
     public void ActivateDetection()
     {
-        //Este canvas esta arriba, fuera de la pantalla
         inicioCanvas.transform.GetChild(0).transform.DOMoveY(4500, 0.5f);
         inicioCanvas.transform.GetChild(1).transform.DOMoveY(4500, 0.5f);
 
