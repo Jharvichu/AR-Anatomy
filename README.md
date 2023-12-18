@@ -7,4 +7,4 @@ AR-Anatomy is an innovative educational experience that utilizes augmented reali
 - Application size: 204.9MB.
 - The application only works for Android.
 
-Link [ejemplo educativo](https://www.mediafire.com/file/x9jl133zs8odnj3/AR-Anatomy.apk/file) 
+Link: [AR-Anatomy.apk](https://www.mediafire.com/file/x9jl133zs8odnj3/AR-Anatomy.apk/file) 
